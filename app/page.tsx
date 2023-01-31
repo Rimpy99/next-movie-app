@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
-import Movies from './Movies';
+import MoviePoster from './MoviePoster';
 
 export default async function Home() {
 
@@ -14,7 +14,7 @@ export default async function Home() {
       <h1 className='text-red-500'>main page</h1>
       {
         res.results.map((movie: any) => (
-            <div>{movie.title}</div>
+            <MoviePoster posterPath={movie.poster_path}  movieId={movie.id}/>
         ))
       }
     </main>
