@@ -10,8 +10,7 @@ export default async function Home() {
   console.log(res);
 
   return (
-    <main>
-      <h1 className='text-red-500'>main page</h1>
+    <main className='grid grid-cols-5 py-7 px-7'>
       {
         res.results.map((movie: any) => (
             <MoviePoster posterPath={movie.poster_path}  movieId={movie.id}/>
