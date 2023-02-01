@@ -12,12 +12,14 @@ export default function MoviePoster({posterPath, movieId}: Props){
 
     return(
         <div className="py-4 px-2">
-            <Image 
-                src={imagePath + posterPath}
-                width={400}
-                height={400}
-                alt={`${movieId}-poster`}
-            />
+            <Link href={`/${movieId}`}>
+                <Image 
+                    src={imagePath + posterPath}
+                    width={400}
+                    height={400}
+                    alt={`${movieId}-poster`}
+                />
+            </Link>
         </div>
     );
 };
