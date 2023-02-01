@@ -9,8 +9,6 @@ export default async function Movie({params}: any){
     const fetchData = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`);
     const res = await fetchData.json();
 
-    console.log(res)
-
     return(
         <div className='flex justify-center items-center'> 
             <div>

@@ -12,7 +12,7 @@ export default async function Home() {
     <main className='grid grid-cols-fluid py-7 px-7'>
       {
         res.results.map((movie: any) => (
-          <MoviePoster posterPath={movie.poster_path}  movieId={movie.id}/>
+          <MoviePoster posterPath={movie.poster_path}  movieId={movie.id} key={movie.id}/>
         ))
       }
     </main>
