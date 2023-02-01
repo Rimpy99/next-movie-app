@@ -12,14 +12,25 @@ export default async function Movie({params}: any){
     console.log(res)
 
     return(
-        <>  
-            <Image
-                src={imagePath + res.poster_path}
-                width={400}
-                height={400}
-                alt={`${movieId}-poster`}
-            />
-            {res.title}
-        </>
+        <div className='flex justify-center items-center'> 
+            <div>
+                <div className='flex justify-center items-center pt-10'>
+                    <Image
+                        src={imagePath + res.poster_path}
+                        width={300}
+                        height={300}
+                        alt={`${movieId}-poster`}
+                    />
+                </div>
+                <div className='flex justify-center items-center flex-col'>
+                    <h1 className='py-10 px-10 text-center'>
+                        {res.title}
+                    </h1>
+                    <div className='w-3/4'>
+                        {res.overview}
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
